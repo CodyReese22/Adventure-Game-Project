@@ -7,6 +7,8 @@ public class Window extends Canvas {
     
     private static final long serialVersionUID = 1L;
 
+    // This parameterized constructor sets values for a display window
+    // Then starts the game after it's been constructed
     public Window(int width, int height, String title, Game game) {
         JFrame frame = new JFrame(title);
 
