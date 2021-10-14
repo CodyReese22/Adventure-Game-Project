@@ -1,49 +1,63 @@
 import java.awt.Graphics;
 
+// This class maintains data related to coordinate positions and movement speeds
 public abstract class GameObject {
-    protected float x, y;
-    protected float velX, velY;
+    protected float xCoord, yCoord;
+    protected float xVel, yVel;
     protected ID id;
 
+    // Used for instantiating Players and Enemies with a standard velocity
     public GameObject(float x, float y, ID id) {
-        this.x = x;
-        this.y = y;
+        xCoord = x;
+        yCoord = y;
+        xVel = 1;
+        yVel = 1;
         this.id = id;
     }
 
+    // Can be used for instantiating faster Players/Enemies
+    public GameObject(float x, float y, float velX, float velY, ID id) {
+        xCoord = x;
+        yCoord = y;
+        xVel = velX;
+        yVel = velY;
+        this.id = id;
+    }
+
+    // These methods are defined by Player and Character/Enemy objects
     public abstract void tick();
     public abstract void render(Graphics graphics);
 
     public void setX(float x) {
-        this.x = x;
+        xCoord = x;
     }
 
     public float getX() {
-        return x;
+        return xCoord;
     }
 
     public void setY(float y) {
-        this.y = y;
+        yCoord = y;
     }
 
     public float getY() {
-        return y;
+        return yCoord;
     }
 
     public void setVelX(float velX) {
-        this.velX = velX;
+        xVel = velX;
     }
 
     public float getVelX() {
-        return velX;
+        return xVel;
     }
 
     public void setVelY(float velY) {
-        this.velY = velY;
+        yVel = velY;
     }
 
     public float getVelY() {
-        return velY;
+        return yVel;
     }
 
     public void setID(ID id) {

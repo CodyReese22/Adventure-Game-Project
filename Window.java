@@ -19,7 +19,6 @@ public class Window extends Canvas {
         // Close operation after the window is exited out
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(true);
-        window.pack();
         window.setLocationRelativeTo(null);
         window.add(game);
         window.setVisible(true);

@@ -24,7 +24,7 @@ public class Game extends Canvas implements Runnable {
     public Game() {
         new Window(WIDTH, HEIGHT, TITLE, this);
 		init();
-		handler.addObject(new Player(100, 100, ID.Player));
+		handler.addObject(new Player(300, 300, ID.Player));
     }
 
 	private void init() {
